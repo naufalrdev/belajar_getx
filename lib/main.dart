@@ -1,4 +1,4 @@
-import 'package:belajar_getx/bottom_sheet.dart';
+import 'package:belajar_getx/pages/state_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,6 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(home: BottomSheetScreen());
+    return GetMaterialApp(home: StateManagerScreen());
   }
 }
