@@ -1,4 +1,4 @@
-import 'package:belajar_getx/pages/dependency_satu_screen.dart';
+import 'package:belajar_getx/pages/home_route_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: DependencySatuScreen(),
+      home: HomeRouteScreen(),
     );
   }
 }
