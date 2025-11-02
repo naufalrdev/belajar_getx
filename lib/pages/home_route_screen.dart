@@ -1,4 +1,3 @@
-import 'package:belajar_getx/pages/page_satu_route.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,10 +24,11 @@ class HomeRouteScreen extends StatelessWidget {
               //   MaterialPageRoute(builder: (context) => PageSatuRoute()),
               // );
 
-              // ========== Navigator push = Get.to ==========
-              Get.to(() => PageSatuRoute());
+              // ========== Navigator push/pushNamed = Get.to/toNamed ==========
+              // Get.to(() => PageSatuRoute());
+              Get.toNamed("/page_satu");
             },
-            child: Text(">> Page 1 (Get.to)"),
+            child: Text(">> Page 1 (Get.to/toNamed)"),
           ),
           SizedBox(height: 10),
           ElevatedButton(
@@ -38,10 +38,11 @@ class HomeRouteScreen extends StatelessWidget {
               //   MaterialPageRoute(builder: (context) => PageSatuRoute()),
               // );
 
-              // ========== Navigator pushReplacement = Get.off ==========
-              Get.off(() => PageSatuRoute());
+              // ========== Navigator pushReplacement/pushReplacementNamed = Get.off/offNamed ==========
+              // Get.off(() => PageSatuRoute());
+              Get.offNamed("/page_satu");
             },
-            child: Text(">> Page 1 (Get.off)"),
+            child: Text(">> Page 1 (Get.off/offNamed)"),
           ),
         ],
       ),

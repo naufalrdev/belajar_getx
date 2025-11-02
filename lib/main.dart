@@ -1,4 +1,9 @@
 import 'package:belajar_getx/pages/home_route_screen.dart';
+import 'package:belajar_getx/pages/page_dua_route.dart';
+import 'package:belajar_getx/pages/page_empat_route.dart';
+import 'package:belajar_getx/pages/page_lima_route.dart';
+import 'package:belajar_getx/pages/page_satu_route.dart';
+import 'package:belajar_getx/pages/page_tiga_route.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,6 +26,24 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: HomeRouteScreen(),
+      // routes: {
+      //   "home": (context) => HomeRouteScreen(),
+      //   "page_satu": (context) => PageSatuRoute(),
+      //   "page_dua": (context) => PageDuaRoute(),
+      //   "page_tiga": (context) => PageTigaRoute(),
+      //   "page_empat": (context) => PageEmpatRoute(),
+      //   "page_lima": (context) => PageLimaRoute(),
+      // },
+
+      // ========== routes = getPages ==========
+      getPages: [
+        GetPage(name: "/home", page: () => HomeRouteScreen()),
+        GetPage(name: "/page_satu", page: () => PageSatuRoute()),
+        GetPage(name: "/page_dua", page: () => PageDuaRoute()),
+        GetPage(name: "/page_tiga", page: () => PageTigaRoute()),
+        GetPage(name: "/page_empat", page: () => PageEmpatRoute()),
+        GetPage(name: "/page_lima", page: () => PageLimaRoute()),
+      ],
     );
   }
 }
