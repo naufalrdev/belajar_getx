@@ -1,4 +1,6 @@
-import 'package:belajar_getx/pages/home_route_screen.dart';
+import 'package:belajar_getx/controllers/bindings_builder_controller.dart';
+import 'package:belajar_getx/pages/bindings_home_screen.dart';
+import 'package:belajar_getx/pages/bindings_page_satu_screen.dart';
 import 'package:belajar_getx/pages/page_dua_route.dart';
 import 'package:belajar_getx/pages/page_empat_route.dart';
 import 'package:belajar_getx/pages/page_lima_route.dart';
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: HomeRouteScreen(),
+      home: BindingsHomeScreen(),
       // routes: {
       //   "home": (context) => HomeRouteScreen(),
       //   "page_satu": (context) => PageSatuRoute(),
@@ -37,7 +39,14 @@ class MyApp extends StatelessWidget {
 
       // ========== routes = getPages ==========
       getPages: [
-        GetPage(name: "/home", page: () => HomeRouteScreen()),
+        GetPage(name: "/home", page: () => BindingsHomeScreen()),
+        GetPage(
+          name: "/bindings_page_satu",
+          page: () => BindingsPageSatuScreen(),
+          binding: BindingsBuilder(() {
+            Get.put(BindingsBuilderController());
+          }),
+        ),
         GetPage(name: "/page_satu", page: () => PageSatuRoute()),
         GetPage(name: "/page_dua", page: () => PageDuaRoute()),
         GetPage(name: "/page_tiga", page: () => PageTigaRoute()),
