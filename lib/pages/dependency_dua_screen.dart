@@ -9,7 +9,7 @@ class DependencyDuaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     DependencyManageController dependencyDuaC = Get.find();
     return Scaffold(
-      appBar: AppBar(title: Text("Dependency Page Satu"), centerTitle: true),
+      appBar: AppBar(title: Text("Dependency Page Dua"), centerTitle: true),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

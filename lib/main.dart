@@ -1,4 +1,4 @@
-import 'package:belajar_getx/controllers/bindings_builder_controller.dart';
+import 'package:belajar_getx/bindings/bindings_class.dart';
 import 'package:belajar_getx/pages/bindings_home_screen.dart';
 import 'package:belajar_getx/pages/bindings_page_satu_screen.dart';
 import 'package:belajar_getx/pages/page_dua_route.dart';
@@ -43,9 +43,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: "/bindings_page_satu",
           page: () => BindingsPageSatuScreen(),
-          binding: BindingsBuilder(() {
-            Get.put(BindingsBuilderController());
-          }),
+          // binding: BindingsBuilder(() {
+          //   Get.put(BindingsBuilderController());
+          // }),
+          binding: BindingsClass(),
         ),
         GetPage(name: "/page_satu", page: () => PageSatuRoute()),
         GetPage(name: "/page_dua", page: () => PageDuaRoute()),
